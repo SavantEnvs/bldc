@@ -1,0 +1,7 @@
+# Keep local build outputs out of the context; the full repo including .git is still copied.
+build/
+*.o
+*.a
+.DS_Store
+*.swp
+*~
