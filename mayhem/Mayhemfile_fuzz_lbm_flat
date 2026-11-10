@@ -1,0 +1,9 @@
+project: savantenvs/bldc
+target: fuzz_lbm_flat
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lbm_flat/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lbm_flat
+    libfuzzer: true
+    timeout: 30

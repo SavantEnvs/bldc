@@ -1,0 +1,10 @@
+project: savantenvs/bldc
+target: fuzz_lbm_eval
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lbm_eval/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lbm_eval
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_lbm_eval/fuzz_lbm_eval.dict
